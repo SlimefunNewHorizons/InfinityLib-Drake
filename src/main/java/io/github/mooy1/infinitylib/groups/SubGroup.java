@@ -6,7 +6,7 @@ import org.bukkit.entity.Player;
 import org.bukkit.inventory.ItemStack;
 
 import io.github.mooy1.infinitylib.core.AbstractAddon;
-import com.github.drakescraft_labs.slimefun4.api.items.ItemGroup;
+import io.github.thebusybiscuit.slimefun4.api.items.ItemGroup;
 
 /**
  * A category that is hidden from the main guide page

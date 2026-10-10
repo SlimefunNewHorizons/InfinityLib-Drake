@@ -17,9 +17,9 @@ import org.bukkit.plugin.java.JavaPluginLoader;
 import io.github.mooy1.infinitylib.InfinityLib;
 import io.github.mooy1.infinitylib.commands.AddonCommand;
 import io.github.mooy1.infinitylib.common.Scheduler;
-import com.github.drakescraft_labs.slimefun4.api.SlimefunAddon;
-import com.github.drakescraft_labs.slimefun4.implementation.Slimefun;
-import com.github.drakescraft_labs.slimefun4.libraries.dough.updater.GitHubBuildsUpdater;
+import io.github.thebusybiscuit.slimefun4.api.SlimefunAddon;
+import io.github.thebusybiscuit.slimefun4.implementation.Slimefun;
+import io.github.thebusybiscuit.slimefun4.libraries.dough.updater.GitHubBuildsUpdater;
 
 /**
  * Extend this in your main plugin class to access a bunch of utilities

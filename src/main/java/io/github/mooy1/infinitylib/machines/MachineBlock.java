@@ -16,12 +16,12 @@ import org.bukkit.inventory.ItemStack;
 
 import io.github.mooy1.infinitylib.common.StackUtils;
 import io.github.mooy1.infinitylib.core.AbstractAddon;
-import com.github.drakescraft_labs.slimefun4.api.items.ItemGroup;
-import com.github.drakescraft_labs.slimefun4.api.items.SlimefunItemStack;
-import com.github.drakescraft_labs.slimefun4.api.recipes.RecipeType;
-import com.github.drakescraft_labs.slimefun4.utils.ChestMenuUtils;
-import com.github.drakescraft_labs.slimefun4.legacy.api.inventory.BlockMenu;
-import com.github.drakescraft_labs.slimefun4.legacy.api.inventory.BlockMenuPreset;
+import io.github.thebusybiscuit.slimefun4.api.items.ItemGroup;
+import io.github.thebusybiscuit.slimefun4.api.items.SlimefunItemStack;
+import io.github.thebusybiscuit.slimefun4.api.recipes.RecipeType;
+import io.github.thebusybiscuit.slimefun4.utils.ChestMenuUtils;
+import me.mrCookieSlime.Slimefun.api.inventory.BlockMenu;
+import me.mrCookieSlime.Slimefun.api.inventory.BlockMenuPreset;
 
 @ParametersAreNonnullByDefault
 public final class MachineBlock extends AbstractMachineBlock {
