@@ -78,12 +78,30 @@
             <scope>test</scope>
         </dependency>
 
-        <!-- MockBukkit 1.16/1.5.0 se apoya en una API de Paper anterior a 1.21
-             y falla con NoClassDefFoundError en PotionEffectType. -->
+        <!-- MockBukkit necesita Byte Buddy con soporte de inyeccion de clases
+             en JDK 25 (misma solucion que Slimefun4-Drake 67fff6a09): sin esto
+             falla con "Invisible parameter type" al cargar el MockAddonProxy. -->
+        <dependency>
+            <groupId>net.bytebuddy</groupId>
+            <artifactId>byte-buddy</artifactId>
+            <version>1.17.7</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>net.bytebuddy</groupId>
+            <artifactId>byte-buddy-agent</artifactId>
+            <version>1.17.7</version>
+            <scope>test</scope>
+        </dependency>
+
+        <!-- MockBukkit v1.21 (1.16/1.5.0 o 4.83.1) trae datos de registros de
+             otra version de MC y falla con InternalDataLoadException en
+             `point_of_interest_type` contra Paper 26.2. En 26.x se usa el
+             artefacto mockbukkit-v26.2 (convencion de Drakes-Suites/Odysseia). -->
         <dependency>
             <groupId>org.mockbukkit.mockbukkit</groupId>
-            <artifactId>mockbukkit-v1.21</artifactId>
-            <version>4.83.1</version>
+            <artifactId>mockbukkit-v26.2</artifactId>
+            <version>4.116.1</version>
             <scope>test</scope>
         </dependency>
     </dependencies>

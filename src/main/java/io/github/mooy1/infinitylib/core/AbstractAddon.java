@@ -101,6 +101,25 @@ public abstract class AbstractAddon extends JavaPlugin implements SlimefunAddon 
         validate();
     }
 
+    /**
+     * Library Testing Constructor (MockBukkit 4.x)
+     *
+     * MockBukkit 4.x instancia el plugin con su propio classloader y solo busca
+     * constructores sin los parametros del loader, asi que el constructor de arriba
+     * deja de ser alcanzable desde los tests en Paper 26.x.
+     */
+    AbstractAddon(String githubUserName, String githubRepo, String autoUpdateBranch, String autoUpdateKey,
+                  Environment environment) {
+        this.updater = null;
+        this.environment = environment;
+        this.githubUserName = githubUserName;
+        this.autoUpdateBranch = autoUpdateBranch;
+        this.githubRepo = githubRepo;
+        this.autoUpdateKey = autoUpdateKey;
+        this.bugTrackerURL = "https://github.com/" + githubUserName + "/" + githubRepo + "/issues";
+        validate();
+    }
+
     private void validate() {
         if (environment == Environment.LIVE) {
             if (InfinityLib.PACKAGE.contains("mooy1.infinitylib")) {
