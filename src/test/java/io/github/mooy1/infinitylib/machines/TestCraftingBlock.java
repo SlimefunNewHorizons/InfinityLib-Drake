@@ -9,7 +9,7 @@ import org.junit.jupiter.api.Order;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestMethodOrder;
 
-import be.seeseemelk.mockbukkit.MockBukkit;
+import org.mockbukkit.mockbukkit.MockBukkit;
 import io.github.mooy1.infinitylib.core.MockAddon;
 import io.github.mooy1.infinitylib.groups.SubGroup;
 import com.github.drakescraft_labs.slimefun4.api.items.SlimefunItemStack;
