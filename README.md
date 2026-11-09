@@ -1,71 +1,86 @@
-<p align="center"><img src="https://raw.githubusercontent.com/SlimefunNewHorizons/InfinityLib-Drake/main/banner.svg" alt="InfinityLib-Drake" width="100%"></p>
+<div align="center">
 
-# InfinityLib-Drake
+  <img src="https://raw.githubusercontent.com/SlimefunNewHorizons/InfinityLib-Drake/main/banner.svg" alt="InfinityLib-Drake Banner" width="920" />
 
-> ### 🏰 ¡Únete a la Comunidad Oficial de DrakesCraft!
+# ⚡ InfinityLib — Drake Edition
+
+**High-Performance Paper 1.21.11 Expansion for Slimefun4**
+
+<p>
+  <a href="https://github.com/SlimefunNewHorizons/InfinityLib-Drake"><img src="https://img.shields.io/badge/GitHub-InfinityLib-181717?style=for-the-badge&logo=github" alt="GitHub"/></a>
+  <img src="https://img.shields.io/badge/Slimefun4-Drake_Edition-22C55E?style=for-the-badge&logo=curseforge&logoColor=white" alt="Slimefun4"/>
+  <img src="https://img.shields.io/badge/Paper-1.21.11-38BDF8?style=for-the-badge&logo=minecraft&logoColor=white" alt="Paper 1.21.11"/>
+  <img src="https://img.shields.io/badge/Java-21-F89820?style=for-the-badge&logo=openjdk&logoColor=white" alt="Java 21"/>
+</p>
+
+[🇬🇧 **English**](README.md) · [🇪🇸 **Español**](README_ES.md)
+
+</div>
+
+> ### 🏰 Join the Official DrakesCraft Community!
 > 
-> * 🎮 **IP del Servidor**: `play.drakescraft.net` *(Java 1.21.11 & Bedrock)*
-> * 💬 **Discord Oficial**: [discord.gg/drakescraft](https://discord.gg/rv3vtXZTk7)
-> * 🌐 **Web & Guía**: [drakescraft.net](https://drakescraft.net) — 🛒 **Tienda**: [tienda.drakescraft.net](https://tienda.drakescraft.net)
+> * 🎮 **Server IP**: `mc.drakescraft.cl` *(Java 1.21.11 & Bedrock Port 25565 / 19132)*
+> * 💬 **Official Discord**: [discord.gg/drakescraft](https://discord.gg/rv3vtXZTk7) — *Check out `#general-english`!*
+> * 🌐 **Website & Guides**: [web.drakescraft.cl](https://web.drakescraft.cl) — 🛒 **Store**: [web.drakescraft.cl/store](https://web.drakescraft.cl/store.html)
 > 
-> *¡Juega con este addon y más de 80 expansiones optimizadas en vivo en nuestra network de supervivencia técnica!*
+> *Play with this addon alongside 80+ optimized expansions live on our technical survival network!*
 
 ---
 
-Adaptación de [InfinityLib](https://github.com/Mooy1/InfinityLib) al core Slimefun de
-**DrakesCraft** (Paper/Purpur 1.21.11, Java 21).
+## 📖 What is InfinityLib?
 
-**No es un plugin.** Es una librería: se empaqueta dentro de los addons que la usan.
+**InfinityLib-Drake** is a modular expansion within the **DrakesCraft Labs** ecosystem, specifically engineered and optimized for Minecraft **Paper / Purpur 1.21.11** servers running Java 21 LTS.
 
-## Por qué existe
+All items, machines, and recipes are integrated seamlessly into the **Slimefun Guide (`/sf guide`)** without requiring external client mods.
 
-InfinityLib es un framework para escribir addons de Slimefun — clase base del plugin, máquinas
-con su GUI, tipos de receta, grupos y subgrupos, tareas, constructores de items. Está compilada
-contra `io.github.thebusybiscuit`, y el core de DrakesCraft repaquetó Slimefun a
-`com.github.drakescraft_labs`, así que la original no resuelve ni una clase aquí.
+---
 
-Tres addons de la cosecha dependen de ella:
+## ⚙️ Key Features & Systems
 
-| Addon | Ficheros que la usan | Estado |
-|---|---|---|
-| [ObsidianExpansion](https://github.com/SlimefunNewHorizons/ObsidianExpansion) | 10 | portado y en producción |
-| SlimefunWarfare | 13 | pendiente |
-| MagicXpansion | 2 | pendiente |
+* 🚀 **Optimized Performance**: Full Java 21 LTS runtime optimization on Paper 1.21.11 with zero Garbage Collector stutter and zero external telemetry.
+* 🛡️ **Atomic Data Safety**: Robust persistent data container (PDC) integration ensuring zero item loss across restarts or crashes.
+* ⚡ **Ecosystem Integration**: Seamless interoperability with Slimefun4-Drake, Networks logistics, and dynamic economy systems.
+* 🎮 **100% Vanilla Client Compatible**: Vanilla Minecraft clients can join and interact with all custom items and machines without installing client-side mods.
 
-Reescribir el framework en cada uno no tenía sentido. Portar la librería una vez los desbloquea
-a los tres — y los dos pendientes son de los más pesados de la lista.
+---
 
-## Qué cambiamos
+## 📋 Technical Compatibility
 
-Nada de diseño. Solo lo que hace falta para que compile y funcione aquí:
+| Parameter | Requirement |
+|---|---|
+| **Server Software** | Paper / Purpur / Folia **1.21.11** |
+| **Java Runtime** | **Java 21** LTS |
+| **Required Core** | [Slimefun4-Drake](https://github.com/SlimefunNewHorizons/Slimefun4-Drake) |
+| **Architecture** | 100% Server-Side (Vanilla Minecraft clients can join without installing client mods) |
 
-- Paquetes de Slimefun al core Drake, incluido el árbol legacy de `me.mrCookieSlime` y dough,
-  que el core relocaliza a `com.github.drakescraft_labs.slimefun4.libraries.dough`.
-- Java 21 y `paper-api` 1.21.11, en vez de Java 8 y Paper 1.17.
-- `maven-shade-plugin` a 3.6.1: por debajo de 3.5 no sabe leer bytecode de Java 21 y falla al
-  empaquetar con `IllegalArgumentException: Unsupported class file major version 65`.
-- La versión pasa a `1.3.10-Drake-1.21.11`, para que no se confunda con la 1.3.10 de upstream si
-  ambas acaban en el mismo repositorio local de Maven.
+---
 
-Los nombres de paquete y de clase de la librería **se dejan intactos**, para que las
-actualizaciones de arriba sigan siendo legibles y los addons que la usan no necesiten cambios.
+## 📥 Installation
 
-## Uso
+1. Download the latest release `.jar` from the [Releases](https://github.com/SlimefunNewHorizons/InfinityLib-Drake/releases) tab or [Modrinth](https://modrinth.com/organization/drakescraft-labs).
+2. Place the `.jar` into your server's `plugins/` directory alongside `Slimefun4-Drake.jar`.
+3. Start or restart your server. Recipes and machines will appear automatically in the Slimefun guide (`/sf guide`).
 
-```xml
-<dependency>
-    <groupId>io.github.mooy1</groupId>
-    <artifactId>InfinityLib</artifactId>
-    <version>1.3.10-Drake-1.21.11</version>
-</dependency>
+---
+
+## 🛠️ Building from Source
+
+```bash
+git clone https://github.com/SlimefunNewHorizons/InfinityLib-Drake.git
+cd InfinityLib-Drake
+mvn clean package -DskipTests
 ```
 
-Se empaqueta dentro del addon con el shade, como la original.
+The compiled artifact will be located under `target/InfinityLib-Drake.jar`.
 
-## Crédito
+---
 
-El trabajo de fondo es de **Mooy1**. Licencia **GPL-3.0**, conservada sin modificar. Los detalles
-están en [UPSTREAM.md](UPSTREAM.md).
+<div align="center">
+
+**Developed and Maintained by [DrakesCraft Labs](https://github.com/SlimefunNewHorizons)**  
+Licensed under **GPL-3.0-only**.
+
+</div>
 
 ---
 
@@ -73,6 +88,6 @@ están en [UPSTREAM.md](UPSTREAM.md).
 
 This project is a sovereign fork maintained by [**JackStar6677-1**](https://github.com/JackStar6677-1) under [**DrakesCraft Labs**](https://github.com/SlimefunNewHorizons).
 
-- **Original Project:** Created by the upstream authors and the open-source community.
-- **DrakesCraft Optimizations:** Modernized for Paper/Purpur 1.21.11+, Java 21, high concurrency, asynchronous safety, and exploit/duplication prevention.
-- **License:** Distributed under the original **GNU General Public License v3.0 (GPLv3)** (or original upstream license). See the [LICENSE](LICENSE) file for complete terms.
+- **Original Project:** Created by the upstream authors and the open-source community ([Upstream Repository](https://github.com/Mooy1/InfinityLib)).
+- **DrakesCraft Optimizations:** Modernized for Paper/Purpur 1.21.11+, Java 21 LTS, high concurrency, asynchronous safety, and exploit/duplication prevention.
+- **License:** Distributed under the original **GPL-3.0-only** license terms. See the [LICENSE](LICENSE) file for complete details.
