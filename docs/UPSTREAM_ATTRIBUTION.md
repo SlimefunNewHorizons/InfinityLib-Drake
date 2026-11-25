@@ -6,7 +6,8 @@ This repository is part of the [SlimefunNewHorizons](https://github.com/Slimefun
 
 | Author | Commits here | Source |
 |---|---|---|
-| [JackStar6677](https://github.com/JackStar6677) | 3 | GitHub contributors / project history |
+| (pending verification) | n/a | upstream not yet identified |
+
 
 Authors are taken from the repository history (GitHub contributors) and from the code itself (`plugin.yml`). If an original author is missing or wrongly credited, open an issue or mention [@JackStar6677-1](https://github.com/JackStar6677-1) and it will be fixed.
 
